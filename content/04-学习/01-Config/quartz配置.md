@@ -4,10 +4,11 @@
 
 ## 步骤 0. 先决条件
 
-* 在继续之前，您需要安装以下软件
-	* NodeJS (v 20.16+)：https://nodejs.org/zh-cn/
-	* Git：https://git-scm.com/
-	* Obsidian：https://obsidian.md/
+* 在继续之前，您需要安装以下软件[Node.js](https://nodejs.org/en/about/previous-releases)、[Git](https://git-scm.com/)、[Obsidian](https://obsidian.md/)，下载地址直接点链接即可。
+* 安装的攻略如下：
+	* NodeJS (v 20.16+)：
+	* Git：
+	* Obsidian
 
 ## 步骤 1：下载并安装 quartz
 

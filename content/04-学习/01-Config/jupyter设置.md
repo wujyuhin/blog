@@ -1,4 +1,4 @@
-#jupyter
+#环境配置 
 Jupyter 使用 (python 3.7)
 1. 更改 python 环境
 	1)在 cmd 中切换环境 conda activate 你的环境

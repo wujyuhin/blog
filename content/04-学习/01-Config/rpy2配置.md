@@ -1,3 +1,4 @@
+#环境配置 
 在python中使用R
 1.下载R https://blog.csdn.net/Suegsp/article/details/132161875 本机下载版本R-4.1.3-win.exe
 2.记录安装路径：安装的时候复制即可。本机路径 C:\Program Files\R\R-4.1.3
