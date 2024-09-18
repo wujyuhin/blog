@@ -39,6 +39,7 @@
 	- 输入 `npx quartz sync --no-pull`
 		- 将本地仓库所作的更改推送到远程仓库上
 		- 末尾带绿色的 Done！
+		- 如果之前没有绑定 git 和 github 的关系，他会弹出网页让你绑定
 
 ## 步骤 3 obsidian 笔记库建立和更新
 

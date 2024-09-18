@@ -1,4 +1,5 @@
 #环境配置 
+
 # 快速攻略
 
 1. 下载
@@ -26,3 +27,7 @@
 			1. `Git checkout HEAD test.py`  // 恢复之前保存的版本
 
 # 添加 git ignore
+
+# 常用语句
+
+删除本地项目目录的缓存 `git rm -r -cached .`
