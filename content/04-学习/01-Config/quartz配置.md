@@ -50,7 +50,7 @@
 ## 步骤 4  设置 Github Action 自动部署 Github Pages
 
 - 在本地 quartz 中按以下路径创建新文件，并保存以下代码内容
-	- `quartz/.github/workflows/deploy.yml
+	- `quartz/.github/workflows/deploy.yml`
 - 前往 github 仓库，点击 Settings>Pages>Source 下拉菜单，选择 Github Actions
 - 最后提交更改，网站将部署到 `<github-username>.github.io/<repository-names>`，pages 页面会有以下提示 `Your site is live at https://insile.github.io/my- notes/`
 
