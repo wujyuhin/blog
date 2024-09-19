@@ -1,36 +1,37 @@
 #环境配置 
-一、docker 的安装
-1.docker和wsl安装包在本地 【网盘地址】
-2.配置阿里云加速器到docker engine
-	i 登录阿里云->控制台->搜索容器镜像服务-镜像加速 【网站】
-3.下载可视化界面portainer镜像
-	i 查看镜像(命令行执行) docker search portainer
-	ii 下载镜像(第一个) docker pull portainer/portainer
-4. 利用portainer镜像生成portainer容器(以下代码在同一行命令行实现)
-	i docker run -d -p 9000:9000 --restart=always 
-	-v /var/run/docker.sock:/var/run/docker.sock 
-	--name portainer \portainer/portainer
-5.Portainer可视化界面使用
-	i 本地接口打开 http://localhost:9000
 
-二、Neo4j安装与部署(指令均在命令行执行)
-1.获取Neo4j官方镜像
-	i 创建最新版本: dokcer pull neo4j
-	ii 创建指定版本: docker pull neo4j:3.5
-2.创建容器，开启neo4j
-	i 创建一个动态运行的独立环境下的neo4j
-		docker run --name neo4j_movie neo4j
-	ii 设置端口映射(实现同时多开)
-		a 容器端口和本机端口映射一致
-			docker run --name project1-d -p 7474:7474 -p 7687:7687 neo4j
-			本机访问neo4j的http端口: http://localhost:7474
-			本机在http页面中 connect url选择neo4j//localhost:7687
-		b 修改宿主机端口，映射到docker端口，避免发生冲突
-			docker run --name project2 -d -p 7475:7474 -p 7688:7687 neo4j
-			访问neo4j的http端口: http://localhost:7475
-			本机在http页面中 connect url选择neo4j//localhost:7688
+# 一、docker 的安装
 
-三、docker语法
+- 1.docker和wsl安装包在本地 【网盘地址】
+- 2.配置阿里云加速器到docker engine
+	- i 登录阿里云->控制台->搜索容器镜像服务-镜像加速 【网站】
+- 3.下载可视化界面portainer镜像
+	- i 查看镜像(命令行执行) docker search portainer
+	- ii 下载镜像(第一个) docker pull portainer/portainer
+- 4. 利用portainer镜像生成portainer容器(以下代码在同一行命令行实现)
+	- `i docker run -d -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --name portainer \portainer/portainer`
+- 5.Portainer可视化界面使用
+	- i 本地接口打开 http://localhost:9000
+
+# 二、Neo4j安装与部署 (指令均在命令行执行)
+
+- 1.获取Neo4j官方镜像
+	- i 创建最新版本: dokcer pull neo4j
+	- ii 创建指定版本: docker pull neo4j:3.5
+- 2 .创建容器，开启 neo 4 j
+	- i 创建一个动态运行的独立环境下的neo4j, 运行 `docker run --name neo4j_movie neo4j`
+	- ii 设置端口映射(实现同时多开)
+		- a 容器端口和本机端口映射一致
+			- `docker run --name project1-d -p 7474:7474 -p 7687:7687 neo4j`
+			- 本机访问neo4j的http端口: http://localhost:7474
+			- 本机在http页面中 connect url选择neo4j//localhost:7687
+		- b 修改宿主机端口，映射到docker端口，避免发生冲突
+			- `docker run --name project2 -d -p 7475:7474 -p 7688:7687 neo4j`
+			- 访问neo4j的http端口: http://localhost:7475
+			- 本机在http页面中 connect url选择neo4j//localhost:7688
+
+# 三、docker语法
+
 1.获取镜像
 	i docker pull ubuntu
 	ii docker pull neo4j:3.5
@@ -61,7 +62,4 @@
 		cat docker/neo4j.tar | docker import - test/neo4j
 
 docker run -v /neo4j/data:/data --name movie2 -d -p 7476:7474 -p 7689:7687 -it neo4j /bin/bash
-
-
-
 

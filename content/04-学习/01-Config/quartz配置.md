@@ -1,6 +1,6 @@
 #环境配置 
 
-# 配置 quartz
+# 一、配置 quartz
 
 ## 步骤 0. 先决条件
 
@@ -105,7 +105,12 @@ jobs:
 
 引用[使用 Quartz 4.0 和 GitHub Pages 发布托管 Obsidian 笔记](https://insile.github.io/my-notes/%E7%AC%94%E8%AE%B0/Text/%E4%BD%BF%E7%94%A8-Quartz-4.0-%E5%92%8C-GitHub-Pages-%E5%8F%91%E5%B8%83%E6%89%98%E7%AE%A1-Obsidian-%E7%AC%94%E8%AE%B0)
 
-# Quartz 使用技巧
+# 二、可能出现的 bug
+
+- Github 仓库克隆到本地可能报错，需要将 https 端口跳到 7890，然后打开本地代理，翻墙和不翻墙都试一下
+- 刚刚部署完后的笔记查看不了，最好写一些内容丰富的笔记，然后再打开即可
+
+# 三、Quartz 使用技巧
 
 ## 修改页面的元素
 
