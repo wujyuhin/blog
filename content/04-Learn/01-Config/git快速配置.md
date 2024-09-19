@@ -30,4 +30,4 @@
 
 # 常用语句
 
-删除本地项目目录的缓存 `git rm -r -cached .`
+删除本地项目目录的缓存 `git rm -r --cached .`

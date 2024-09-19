@@ -32,34 +32,34 @@
 
 # 三、docker语法
 
-1.获取镜像
-	i docker pull ubuntu
-	ii docker pull neo4j:3.5
-2.新建容器
-	i docker run --name project3 -d -p 7476:7474 -p 7689:7687 neo4j:3.5
-		a 运行一个容器： docker run
-		b 命名：--name 名称
-		c 后台方式运行：-d
-		d 宿主机到容器的port映射：-p 宿主机端口:容器端口
-		e 运行指定镜像：neo4j:3.5
-	ii docker run ubuntu:15.10 /bin/echo "Hello world"
-		a 在启动的ubuntu容器中执行命令：/bin/echo "Hello world"
-3.对容器的操作
-	i 启动已有容器
-		docker start 容器名称/id
-	ii 关闭已有容器
-		docker stop 容器名称/id
-	iii 重启容器
-		docker restart 容器名称/id
-	iv 查看所有容器
-		docker ps
-	v 导出容器
-		(a) docker export 容器id > neo4j.tar
-			(neo4j.tar是导出的文件名和文件格式)
-		(b) 导出容器中的某个数据
-			neo4j_v
-	vi 导入容器
-		cat docker/neo4j.tar | docker import - test/neo4j
+- 1.获取镜像
+	- i docker pull ubuntu
+	- ii docker pull neo4j:3.5
+- 2.新建容器
+	- i 输入 `docker run --name project3 -d -p 7476:7474 -p 7689:7687 neo4j: 3.5`
+		- 运行一个容器： docker run
+		- 命名：--name 名称
+		- 后台方式运行：-d
+		- 宿主机到容器的port映射：-p 宿主机端口:容器端口
+		- 运行指定镜像：neo4j:3.5
+	- ii 输入 `docker run ubuntu: 15.10 /bin/echo "Hello world"`
+		- 在启动的ubuntu容器中执行命令：/bin/echo "Hello world"
+- 3.对容器的操作
+	- i 启动已有容器
+		- docker start 容器名称/id
+	- ii 关闭已有容器
+		- docker stop 容器名称/id
+	- iii 重启容器
+		- docker restart 容器名称/id
+	- iv 查看所有容器
+		- docker ps
+	- v 导出容器
+		- (a) docker export 容器id > neo4j.tar
+			- (neo4j.tar是导出的文件名和文件格式)
+		- (b) 导出容器中的某个数据
+			- neo4j_v
+		- vi 导入容器
+			- `cat docker/neo4j.tar | docker import - test/neo4j`
 
 docker run -v /neo4j/data:/data --name movie2 -d -p 7476:7474 -p 7689:7687 -it neo4j /bin/bash
 
