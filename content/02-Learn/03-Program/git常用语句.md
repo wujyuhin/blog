@@ -1,5 +1,12 @@
 #常用语句 
 
+顶置常用句
+- 添加 `gitignore` 文件：`cmd` 中输入 `touch .gitignore`
+- 删除本地缓存 `git rm -r --cached`
+- 查看状态 `git status`
+- 从缓存区撤回某文件 `git rm --cached file1.txt`
+- 提交缓存区的文件 `git commit`
+
 # 常用语句
 
 - 添加 `gitignore`  文件

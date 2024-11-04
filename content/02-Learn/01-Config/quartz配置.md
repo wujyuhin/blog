@@ -8,7 +8,7 @@
 * 安装的攻略如下：
 	* NodeJS (v 20.16+)：[[nodejs配置]]
 	* Git：[[git快速配置]]
-	* Obsidian：不用特别配置，下载安装即可。[[obsidian使用]]
+	* Obsidian：不用特别配置，下载安装即可。[[obsidian]]
 
 ## 步骤 1：下载并安装 quartz
 
