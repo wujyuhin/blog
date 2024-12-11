@@ -48,6 +48,8 @@ $$
 	- Deep learning-based: Neural CD (In order to better fitting ability of sophisticated cognitive process and promising interpretability.)（想要更好的拟合认知过程和可解释性，需要结合心理测量学的理论和假设）
 ![[Pasted image 20241211104950.png#pic_center]]
 
+# Overview CDM
+
 ## CDM mathematization
 
 - **Suppose Data**
@@ -68,5 +70,26 @@ $$
 		- 题目的一些统计量如正确率会受到考生的影响。然而，试题的难度、区分度、相关知识概念等特征反映了试题的本质特征，不应改变。这种稳定性有助于所有考生对测验项目的公平性，并表明测验项目可以用反映这些特征的固定参数值来表示。
 	- Assumption 3 monotonicity
 		- The probability of a correct response to the test item increases, or at least does not decrease, as the locations of examinees increase on any of the coordinate dimensions
-		- 大多数认知诊断模型采用单调性假设对认知过程进行建模，尤其是基于 IRT 和 MIRT 的模型。该假设表明
-		- 大多数认知诊断模型采用单调性假设对认知过程进行建模，尤其是基于 IRT 和 MIRT 的模型。该假设表明
+		- 任意一个维度上的能力提升，在作答正确的可能性应该增加，或者至少不降。
+		- 大多数认知诊断模型采用单调性假设对认知过程进行建模，尤其是基于 IRT 和 MIRT 的模型。该假设表明，更好的表现应该来自于更高的能力水平，这与通常的直觉或经验是一致的。
+
+## A Brief Review of Cognitive Diagnosis Model Development
+
+![[Pasted image 20241211154402.png]]
+
+Without cognitive diagnosis, the most widely adopted method to evaluate a learner’s ability is through their scores obtained in tests. Eg. Classical Test Theory (CTT)
+消除分数中存在的错误而提出，但分数是受到问题属性和其他心理特征等因素影响观察到的能力，这是隐藏的，因此通过几十年的发展，从数据特征和模型结构总结：
+
+- The development of model structures
+	- Psychometrics-based models
+		- IRT, MIRT: unidimensional or multidimensional latent vectors to represent examinees'overall ability levels (一维或者多维潜在向量表示学生的整体水平)
+		- RSM, DINA, GDM, G-DINA(proposal of Q)（随着测量细粒度能力的需求，对知识概念的掌握，逐渐提出了认知水平范式）
+	- Machine learning-based models
+		- Clustering algorithms 聚类算法
+		- Support vector machine 支持向量机
+		- Matrix factorization 矩阵分解
+		- Fuzzy set 模糊集
+		- Artificial neural networks 人工神经网络
+		- Deep-learning based NCDM （随之跟进大量的数据驱动的深度学习方法）
+		- Encoder-decoder-like CDM （重点研究诊断，是从框架上突破了以 NCDM 为基础的众多模型的题目和学生 id embedding问题）
+- The changes of exploited data
