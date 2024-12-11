@@ -1,15 +1,10 @@
 ---
-tags: []
-parent: 'A Survey of Models for Cognitive Diagnosis: New Developments and Future Directions'
+tags:
+  - "#文献笔记"
+parent: "A Survey of Models for Cognitive Diagnosis: New Developments and Future Directions"
 collections:
-    - 认知诊断
-$version: 0
-$libraryID: 1
-$itemKey: 7JEFCR7Y
-
+  - 认知诊断
 ---
-Survey of CDM
-
 认知诊断模型研究综述：新进展与未来方向
 
 # Introduction
@@ -71,3 +66,7 @@ $$
 	- Assumption 2 constant item charateristics
 		- The characteristics of a test item remain constant over all of the testing situations where it is used
 		- 题目的一些统计量如正确率会受到考生的影响。然而，试题的难度、区分度、相关知识概念等特征反映了试题的本质特征，不应改变。这种稳定性有助于所有考生对测验项目的公平性，并表明测验项目可以用反映这些特征的固定参数值来表示。
+	- Assumption 3 monotonicity
+		- The probability of a correct response to the test item increases, or at least does not decrease, as the locations of examinees increase on any of the coordinate dimensions
+		- 大多数认知诊断模型采用单调性假设对认知过程进行建模，尤其是基于 IRT 和 MIRT 的模型。该假设表明
+		- 大多数认知诊断模型采用单调性假设对认知过程进行建模，尤其是基于 IRT 和 MIRT 的模型。该假设表明
