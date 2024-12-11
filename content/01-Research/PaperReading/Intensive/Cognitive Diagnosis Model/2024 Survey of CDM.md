@@ -37,7 +37,7 @@ $$
 Rr(response) = f(\theta,\beta,\Omega)
 $$
 
-![[Pasted image 20241210174212.png#pic_center|500]] 
+![[Pasted image 20241210174212.png#pic_center]] 
 - Base on psychometrics
 	- Item response theory (IRT)
 		- Measure macro ability of individuals
