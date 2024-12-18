@@ -159,13 +159,15 @@ DINA and relevant CDMs
 		- About $\eta_{ij},e.g.$
 		- $q_j=(0,0,1,1)$，$\theta_i=(0,1,1,1)\longrightarrow \eta_{ij}=1$
 		- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,0)\longrightarrow \eta_{ij}=0$
+![[Pasted image 20241218100546.png]]
 
+```
 $$\begin{aligned} P(r_{ij}=1|\theta_i, q_j) &= (1-s_j)\eta_{ij} + g_j(1-\eta_{ij}) \\
-
 &=\left\{\begin{aligned}1-s_j,\eta_{ij}=1 \\ g_j,\eta_{ij}=0  \end{aligned}\right.
-
 \quad where \quad\eta_{ij} = \prod_{k=1}^{K} \theta_{ik}^{q_{jk}}
 \end{aligned}$$
+```
+
 - ==**DINO**==：The Deterministic Input, Noisy “Or” Gate
 	- Assumption: knowledge concepts is compensatory
 	- Shortcomings：over-estimation of students' ability levels
@@ -173,26 +175,32 @@ $$\begin{aligned} P(r_{ij}=1|\theta_i, q_j) &= (1-s_j)\eta_{ij} + g_j(1-\eta_{ij
 	- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,0)\longrightarrow \eta_{ij}=1$
 	- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,1)\longrightarrow \eta_{ij}=1$
 	- $q_j=(0,0,1,1)$，$\theta_i=(0,1,1,1)\longrightarrow \eta_{ij}=1$
-$$ 
 
-\begin{aligned}
+![[Pasted image 20241218100610.png]]
+
+```
+$$ \begin{aligned}
 P(R_{ij}=1|\theta_i, q_j) &= (1 - s_j)\eta_{ij} + g_j(1-\eta_{ij}) \\
 &=\left\{\begin{aligned}1-s_j,\eta_{ij}=1 \\ g_j,\eta_{ij}=0  \end{aligned}\right. \quad where \quad \eta_{ij}=\left(1 - \prod_{k=1}^{K} (1-\theta_{ik})^{q_{jk}}\right)
-\end{aligned}
-
-$$
+\end{aligned}$$
+```
 
 # 4. 基于深度学习的模型
 
 ![[Pasted image 20241217092051.png]]
 掌握模式分类器、认知交互模拟器、及编码器-解码器架构
+
 ## 4.1 非深度学习模型
+
 - 聚类算法：将学生分为不同的簇，每个簇表示知识掌握模式
 	- K-means 结合层次聚类分析、谱聚类、支持向量机 (SVM)、矩阵分解等协同过滤方法.
 	- 上述机器学习模型侧重于预测学生表现，而不是诊断学生的知识水平.
 	- FuzzyCDF 继承了模糊集处理主客观题目，用于 IRT 的变分贝叶斯推断算法，处理大规模数据集更准确.
+
 ## 4.2 深度学习模型
+
 ### 4.2.1 深度学习框架
+
 融合深度学习方法已成为认知诊断的新趋势。根据模型架构及其出现时间，基于深度学习的 CDM 一般可以分为掌握模式分类器、认知交互模拟器和基于编码器-解码器的架构。
 ![[Pasted image 20241217092929.png]]
 - 掌握模式分类器 (a)
@@ -225,6 +233,7 @@ $Response=f_{NN_{dec}}(\theta,\beta,\Omega_{dec}|\theta,\beta\leftarrow f_{NN_{e
 ### 4.2.2 多方面的信息整合
 
 尽管认知诊断交互函数技术取得了重大进展，但认知诊断的瓶颈来自初始化仅根据诊断因子的 ID 值得出诊断因子 (学习者特征和测试项目特征)。因此，研究人员开始探索如何利用多方面信息 (包括边信息和领域先验) 来增强诊断因子的表达能力，旨在进一步提高诊断模型的可解释性和性能
+
 $$
 
 Reponse=f_{NN}(\theta,\beta,\Omega|\theta\leftarrow f_{NN_{user}}(X,\Omega_{user}),\beta\leftarrow f_{NN_{user}}(X,\Omega_{item}))
@@ -235,11 +244,12 @@ $$
 - 题目方面信息 (Item-side information)
 - 基于关系图的信息 (Relational graph-based information)
 
-
 ### 4.2.3认知诊断与知识追踪结合 
+
 (Combination of cognitive diagnosis and knowledge tracing)
 
 ### 4.2.4其他问题
+
 - 认知诊断中的冷启动问题
 	- E.g.在线学习导致不同考生有选择性的接触其擅长的题目，或是不定期练习，产生"稀疏问题"，使得诊断结果有偏差.
 - 认知诊断中的公平性
@@ -252,6 +262,5 @@ $$
 	- 学生一直在做题，有新学生、题库有新题等情况，模型重新训练成本大
 - 认知诊断中的数据隐私
 	- 学习者在学习平台上的行为数据可能是学习者或平台管理员不允许共享的私有数据。
-
 
 ![[Pasted image 20241217130820.png]]
