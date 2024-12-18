@@ -147,14 +147,18 @@ $$
 - ==How？==： classifying students to an “ideal” proficiency pattern
 - ==So==： traditional cognitive level paradigm-based CDMs are also named as Diagnostic Classification Model (DCM)
 RSM And Its Variations
-- ==**RSM**==： Rule Space Method. 规则空间方法
+- ==RSM==： Rule Space Method. 规则空间方法
 	- 侧重表示个体对测试项目做出的反应的认知过程，识别个体在回答测试项目时采用的特定规则。缺点在于它把只是概念看作独立的实体，忽略知识点之间的关系
-- ==**AHM**==： Attribute Hierarchy Method 属性层次方法
+- ==AHM==： Attribute Hierarchy Method 属性层次方法
 	- Add a adjacent Matrix to Limit RSM
 DINA and relevant CDMs
-- ==**DINA**==：Deterministic Input, Noisy “And” Gate
+- ==DINA==：Deterministic Input, Noisy “And” Gate
 	- Assumption: konwledge concepts is non-compensatory
 	- $Pr(r_{ij}=1|\theta_i,q_j,s_j,g_j)=(1-s_j)^{\eta_{ij}}g_j^{1-\eta_{ij}}$, where $\eta_{ij}=\prod^K_{k=1}\theta_{ik}^{q_{jk}}$
+	- $s_j$ and $g_j$ is slip and guess
+		- About $\eta_{ij},e.g.$
+		- $q_j=(0,0,1,1)$，$\theta_i=(0,1,1,1)\longrightarrow \eta_{ij}=1$
+		- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,0)\longrightarrow \eta_{ij}=0$
 
 $$\begin{aligned} P(r_{ij}=1|\theta_i, q_j) &= (1-s_j)\eta_{ij} + g_j(1-\eta_{ij}) \\
 
@@ -162,15 +166,13 @@ $$\begin{aligned} P(r_{ij}=1|\theta_i, q_j) &= (1-s_j)\eta_{ij} + g_j(1-\eta_{ij
 
 \quad where \quad\eta_{ij} = \prod_{k=1}^{K} \theta_{ik}^{q_{jk}}
 \end{aligned}$$
-
-	- $s_j$ and $g_j$ is slip and guess
-		- About $\eta_{ij},e.g.$
-		- $q_j=(0,0,1,1)$，$\theta_i=(0,1,1,1)\longrightarrow \eta_{ij}=1$
-		- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,0)\longrightarrow \eta_{ij}=0$
 - ==**DINO**==：The Deterministic Input, Noisy “Or” Gate
 	- Assumption: knowledge concepts is compensatory
 	- Shortcomings：over-estimation of students' ability levels
-
+	- About $\eta_{ij},e.g.$
+	- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,0)\longrightarrow \eta_{ij}=1$
+	- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,1)\longrightarrow \eta_{ij}=1$
+	- $q_j=(0,0,1,1)$，$\theta_i=(0,1,1,1)\longrightarrow \eta_{ij}=1$
 $$ 
 
 \begin{aligned}
@@ -179,20 +181,6 @@ P(R_{ij}=1|\theta_i, q_j) &= (1 - s_j)\eta_{ij} + g_j(1-\eta_{ij}) \\
 \end{aligned}
 
 $$
-	- About $\eta_{ij},e.g.$
-	- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,0)\longrightarrow \eta_{ij}=1$
-	- $q_j=(0,0,1,1)$，$\theta_i=(0,0,1,1)\longrightarrow \eta_{ij}=1$
-	- $q_j=(0,0,1,1)$，$\theta_i=(0,1,1,1)\longrightarrow \eta_{ij}=1$
-
-$$
-
-\begin{aligned}
-P(R_{ij}=1|\theta_{ik}, q_j) &= (1 - s_j)\theta_{ik} + g_j(1-\theta_{ik}) \\
-&=\left\{\begin{aligned}1-s_j,\eta_{ij}=1 \\ g_j,\eta_{ij}=0  \end{aligned}\right. \quad where \quad \eta_{ij}=\left(1 - \prod_{k=1}^{K} (1-\theta_{ik})^{q_{jk}}\right)
-\end{aligned}
-
-$$
-
 
 # 4. 基于深度学习的模型
 
