@@ -113,25 +113,25 @@ Without cognitive diagnosis, the most widely adopted method to evaluate a learne
 ## 3.1 ability levels paradigm
 
 - Item Response Theory (IRT)
-	- ==Model==: IRT (most classical latent trait methods for  measuring human cognitive status)
-	- ==Assumption==: relation between **examinees' responese** and **their ability levels** can be modeledby a continuous mathematical function. $Pr(r_{ij}=1)=f(\theta_i,\beta_j)$
-	- ==1 PL-IRT==: 
+	- Model: IRT (most classical latent trait methods for  measuring human cognitive status)
+	- Assumption: relation between **examinees' responese** and **their ability levels** can be modeledby a continuous mathematical function. $Pr(r_{ij}=1)=f(\theta_i,\beta_j)$
+	- 1 PL-IRT: 
 
 $$Pr(r_{ij}=1|\theta_i,b_j)=\sigma(\theta_i-b_j)=\frac{1}{1+e^{-(\theta_i-b_j)}}$$
 
-	- ==2 PL-IRT==: 
+	- 2 PL-IRT: 
 
 $$
 Pr(r_{ij}=1|\theta_i,a_j,b_j)=\frac{1}{1+e^{-a_j(\theta_i-b_j)}}
 $$
 
-	- ==3 PL-IRT==: 
+	- 3 PL-IRT: 
 
 $$
 Pr(r_{ij}=1|\theta_i,a_j,b_j,c_j)=c_j+(1-c_j)\frac{1}{1+e^{-a_j(\theta_i-b_j)}}
 $$
 
-	- ==MIRT==: $\theta_i=(\theta_{i1},...,\theta_{im})$
+	- MIRT: $\theta_i=(\theta_{i1},...,\theta_{im})$
 
 $$
 Pr(r_{ij}=1|\theta_i,a_i,b_j) = \frac{1}{1+e^{-{a_j^T(\theta_i-b_j)}}}=\frac{1}{1+e^{-\Sigma_k{a_j(\theta_{ik}-b_j)}}}=\frac{1}{1+e^{-{a_j(\Sigma_k\theta_{ik}-mb_j)}}}
@@ -168,7 +168,7 @@ $$\begin{aligned} P(r_{ij}=1|\theta_i, q_j) &= (1-s_j)\eta_{ij} + g_j(1-\eta_{ij
 \end{aligned}$$
 ```
 
-- ==**DINO**==：The Deterministic Input, Noisy “Or” Gate
+- ==**==DINO==**==：The Deterministic Input, Noisy “Or” Gate
 	- Assumption: knowledge concepts is compensatory
 	- Shortcomings：over-estimation of students' ability levels
 	- About $\eta_{ij},e.g.$
