@@ -7,22 +7,27 @@ collections:
 ---
 认知诊断模型研究综述：新进展与未来方向
 
-# 1.Introduction
+# 1. 引言
 
 > [!info]
 > 为什么需要认知诊断，引入认知诊断，给出认知诊断的本质
 
-## Definition
+## 定义
 
-**Cognitive diagnosis (CD)** ：Psychology was suggested to be combined with psychometrics in order to model the micro knowledge structure and cognitive processing of persons during the assessments so that the diagnostic results can be more instructional.  
-将心理学与心理测量学相结合，对评估过程中人的微观知识结构和认知加工过程进行建模，使诊断结果更具有指导性。术语认知诊断模型 (CDM)
+**Cognitive diagnosis (CD)** ：将心理学与心理测量学相结合，对评估过程中人的微观知识结构和认知加工过程进行建模，使诊断结果更具有指导性。术语认知诊断模型 (CDM)
+
+解释：
+- 评估过程：考试
+- 微观知识结构：知识属性的关系-加减乘除之上，还有分数运算，还有同分约分
+- 认知加工过程：对知识结构掌握情况对相关的题目的反应
+
 ![](Pasted%20image%2020241210173707.png)
 * left: 
-	* same student, different score:  
-* right: complete CD procedure
-	* test construction: Q
-	* response data collection: R
-	* cognitive diagnosis model: IRT, DINA, NCDM...
+	* 相同学生，不同分数
+* right: 完整的认知诊断流程
+	* 测试结构: Q
+	* 响应数据收集: R
+	* 认知诊断模型: IRT, DINA, NCDM...
 	* psychological factor estimation:  model base on R
 	* diagnosis feedback: different, depend on CDMs , eg:
 		* over all ability(3.1)
@@ -118,6 +123,14 @@ Without cognitive diagnosis, the most widely adopted method to evaluate a learne
 	- 1 PL-IRT: 
 
 $$Pr(r_{ij}=1|\theta_i,b_j)=\sigma(\theta_i-b_j)=\frac{1}{1+e^{-(\theta_i-b_j)}}$$
+
+
+- 首先先清楚这个函数长什么样
+	- $\theta\uparrow \infty \Rightarrow P(r_{ij}=1)\rightarrow 1$
+	- $\theta\downarrow -\infty\Rightarrow P(r_{ij}=1)\rightarrow 0$
+	- $\theta=b \Rightarrow P(r_{ij}=1)\rightarrow \frac{1}{2}$
+- 然后清楚这个函数是什么意思
+	- 
 
 	- 2 PL-IRT: 
 
@@ -264,3 +277,19 @@ $$
 	- 学习者在学习平台上的行为数据可能是学习者或平台管理员不允许共享的私有数据。
 
 ![[Pasted image 20241217130820.png]]
+
+# 5. 未来研究方向讨论
+
+- 认知诊断在更多的领域得到应用.
+- 更多的问题类型和多模态数据.
+- 不止模型结构,e.g.教育领域许多概念的定义系统化.
+- 模型评估,e.g.认知诊断中是利用预测学生的做对与否简洁验证诊断结果.
+
+# 6. 总结
+
+- 回顾了认知诊断模型的发展
+	- 基于心理测量学的CDMs和基于机器学习的CDMs
+- 不仅在模型结构上发生了变化.
+- 数据类型上也发生了变化.
+- 研究主题变得更加多样化.
+- 讨论了具有前景的研究方向.
